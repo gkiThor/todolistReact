@@ -2,9 +2,13 @@
 function App() {
   
   return (
-    <>
-      <h1 className="bg-red-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus eligendi, animi quibusdam architecto eum ut libero! Nostrum quisquam perspiciatis soluta quidem aliquam vero hic labore, fugiat placeat, officiis cumque et.</h1>
-    </>
+    <div className="h-screen bg-slate-300">
+      
+      <div className="max-w-4xl mx-auto pt-20 px-6 ">
+        <h1 className="text-3xl text-slate-950 text-center">To-do liste</h1>
+      </div>
+
+    </div>
   )
 }
 
