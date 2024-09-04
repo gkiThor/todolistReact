@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { nanoid } from "nanoid"
+import ListItem from "./components/ListItem";
 
 function App() {
   
@@ -26,6 +27,10 @@ function App() {
           <button className="mt-4 py-2 bg-slate-600 rounded min-w-[120px] text-slate-50">Ajouter</button>
         </form>
 
+        {/*  Liste de tâche */}
+        <ul>
+          <ListItem></ListItem>
+        </ul>
       </div>
 
     </div>
