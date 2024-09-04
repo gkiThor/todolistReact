@@ -1,6 +1,16 @@
+import { useState } from "react"
+import { nanoid } from "nanoid"
 
 function App() {
   
+  const [todoList, setTodoList] = useState([
+    {id:nanoid(6), content: 'item 1'},
+    {id:nanoid(6), content: 'item 2'},
+    {id:nanoid(6), content: 'item 3'}
+  ])
+
+  console.log(todoList);
+
   return (
     /* Structure de base avec fond gris clair*/
     <div className="h-screen bg-slate-300">
@@ -15,7 +25,7 @@ function App() {
           <input type="text" className="mt-1 block w-full rounded"/>{/* Le input text prend toute la largeur */}
           <button className="mt-4 py-2 bg-slate-600 rounded min-w-[120px] text-slate-50">Ajouter</button>
         </form>
-        
+
       </div>
 
     </div>
