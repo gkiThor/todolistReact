@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function ListItem() {
+export default function ListItem({itemData, deleteTodo}) {
   return (
     <li className="p-2 bg-white mb-2 rounded flex">
-        <span>Item 1</span>
-        <button className="ml-auto bg-red-600 w-6 h-6 rounded text-stone-200">X</button>
+        <span>{itemData.content}</span>
+        <button onClick={() => deleteTodo(itemData.id)} className="ml-auto bg-red-600 w-6 h-6 rounded text-stone-200">X</button>
     </li>
   )
 }

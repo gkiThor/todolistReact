@@ -12,6 +12,10 @@ function App() {
 
   console.log(todoList);
 
+  function deleteTodo(id){
+    setTodoList(todoList.filter(todo => todo.id !== id))
+  }
+
   return (
     /* Structure de base avec fond gris clair*/
     <div className="h-screen bg-slate-300">
@@ -29,7 +33,14 @@ function App() {
 
         {/*  Liste de tâche */}
         <ul>
-          <ListItem></ListItem>
+          {todoList.length === 0 &&(
+            <li className="text-slate-950">Il n'y a pas de listes...</li>
+          )}
+
+
+          {todoList.map(item => (
+             <ListItem key={item.id} itemData={item} deleteTodo={deleteTodo}/>
+          ))}
         </ul>
       </div>
 
