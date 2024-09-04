@@ -28,7 +28,7 @@ function App() {
       return
     }
 
-    setTodoList([...todoList, {id: nanoid(), todo}]);/* Nouveau tableau */
+    setTodoList([...todoList, {id: nanoid(), content: todo}]);/* Nouveau tableau */
     setTodo("");
     setShowValidation(false);
   }
